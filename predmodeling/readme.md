@@ -1,7 +1,8 @@
 **Predictive Modeling Subgroup**
 
 *Getting Started*
- - The shortcut to using the training dataset is to just load up the data from the .RData file
+
+The shortcut to using the training dataset (claims_data) is to just load up the data from the .RData file.  This data has certain columns removed that would perfectly predict the outcome and the policy number.  It also includes our agreed upon dependent variable, "claims."
 
 set the working directory to where you have saved training.RData
 
@@ -13,7 +14,7 @@ this will load the cleaned training set into memory
 
 verify that it worked by printing the first 6 records:
 
-    head(train)
+    head(claims_train)
 
 *Saving your model*
 
