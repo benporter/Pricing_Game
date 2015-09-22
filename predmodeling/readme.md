@@ -18,12 +18,17 @@ verify that it worked by printing the first 6 records:
 
 *Saving your model*
 
-Once you have created the final model ready for submission, save the model object, e.g. the results from the train() function.  In this example, the model object is named gbmFit1.  Prior to saving the model object, all other objects are removed from the workspace.
+Once you have created the final model ready for submission, save the model object, e.g. the results from the train() function.  In this example, the model object is named gbmFit1 saved to to the PorterGBM
 
-    allobjects <- ls()
-    removeObjectList <- allobjects[allobjects  != "gbmFit1"]
-    rm(list = removeObjectList)
-    save.image("PorterBestModel.RData")
+    gbmFit1 <- train(claim ~., 
+                 data = claims_train,
+                 method = "gbm",
+                 trControl = fitControl,
+                 tuneGrid = tuningParameters,
+                 verbose = FALSE)
+                 
+    save(list = c("gbmFit1"),file = "C:/Pricing_Game/predmodeling/PorterGBM.RData")
+
 
 Submit your .RData by either doing a pull request, or email it to Ben.
 
