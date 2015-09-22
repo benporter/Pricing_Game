@@ -7,11 +7,16 @@ Getting Started
  - test
 
 
-    # set the working directory to where you have saved training.RData
+set the working directory to where you have saved training.RData
+
     setwd("/folder/where/file/is/located/")
-    # this will load the cleaned training set into memory
+
+this will load the cleaned training set into memory
+
     load("training.RData")
-    # verify that it worked by printing the first 6 records:
+
+verify that it worked by printing the first 6 records:
+
     head(train)
 
 Saving your model
